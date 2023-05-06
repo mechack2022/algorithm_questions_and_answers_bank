@@ -34,7 +34,6 @@ public class sparseArray {
             long count = stringList.stream().filter(el -> el.equals(str)).count();
             result.add((int) count);
         });
-        System.out.println(result);
         return result;
     }
 
