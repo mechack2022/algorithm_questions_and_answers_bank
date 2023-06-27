@@ -17,11 +17,11 @@ public class LinearSearch {
                 {91, 64, 83, 2, 9}, {94, 42, 20}};
         int[] ans = twoDLinearSearch(arr, 4);
 //        System.out.println(Arrays.toString(ans));
-//        System.out.println(twoDLinearSearch2(arr, 9));
+        System.out.println(twoDLinearSearch2(arr, 9));
 //        System.out.println(twoDLinearSearch2Max(arr));
         int[] nums = {1, 9, 1, 8, 123, 1, 3462};
 //        System.out.println(findEvenDIgit(nums));
-        System.out.println(countDigit2(-123336));
+//        System.out.println(countDigit2(-123336));
 
 
     }

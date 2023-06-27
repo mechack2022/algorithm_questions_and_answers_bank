@@ -1,5 +1,7 @@
 package binarySearch;
 
+import java.util.Arrays;
+
 public class BinarySearch2D {
 
 
@@ -10,7 +12,7 @@ public class BinarySearch2D {
                 {28, 28, 37, 49},
                 {33, 34, 38, 50}
         };
-        System.out.println(search(matrix, 30));
+        System.out.println(Arrays.toString(search(matrix, 30)));
     }
     public static int[] search(int[][] matrix, int target){
         int row = 0;  // where start is row

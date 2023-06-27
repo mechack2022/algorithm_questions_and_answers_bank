@@ -109,6 +109,8 @@ public class BinarySearch {
 //
 //    }
 
+
+
     public static void main(String[] args) {
         int[] arr = {3, 4, 6, 7, 9, 29, 65};
 //        System.out.println(binarySearch(arr, 7));
