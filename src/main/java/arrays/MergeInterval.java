@@ -46,7 +46,7 @@ public class MergeInterval {
         }
 //        sort the intervals by using self define comparator
         Collections.sort(intervals, new CompareInterval());
-
+        System.out.println(intervals);
         ArrayList<Interval> result = new ArrayList<>();
 
         Interval prevItem = intervals.get(0);
