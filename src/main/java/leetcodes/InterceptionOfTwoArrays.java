@@ -20,28 +20,33 @@ Explanation: [4,9] is also accepted.
 public class InterceptionOfTwoArrays {
 
     public static void main(String[] args) {
-        int[] num1 = {1,2,2,1};
-        int[] num2 = {2,2};
-        int[] num3 ={4,9,5};
-        int[] num4 = {9,4,9,8,4};
+        int[] num1 = {1, 2, 2, 1};
+        int[] num2 = {2, 2};
+        int[] num3 = {4, 9, 5};
+        int[] num4 = {9, 4, 9, 8, 4};
 
-        System.out.println((interceptionOfTwoArrays(num1, num2)));
-        System.out.println((interceptionOfTwoArrays(num3, num4)));
+        System.out.println((Arrays.toString(interceptionOfTwoArrays(num1, num2))));
+        System.out.println((Arrays.toString(interceptionOfTwoArrays(num3, num4))));
     }
-    public static HashSet<Integer> interceptionOfTwoArrays(int[] num1, int[] num2){
-      if(  num1.length ==  0){
-          return new HashSet<>();
-      }
-      int count = 0;
-      HashSet<Integer> result = new HashSet<>();
-      for(int i = 0; i < num1.length; i++){
-          for(int j = 0; j < num2.length; j++){
-//              System.out.println("i = " + num1[i] + " j = " + num2[j]);
-              if(num1[i] == num2[j] ){
-                  result.add(num1[i]);
-              }
-          }
-      }
-      return result;
+
+    public static int[] interceptionOfTwoArrays(int[] num1, int[] num2) {
+        if (num1.length == 0) {
+            return new int[0];
+        }
+        HashSet<Integer> result = new HashSet<>();
+        for (int k : num1) {
+            for (int i : num2) {
+                if (k == i) {
+                    result.add(k);
+                }
+            }
+        }
+        // Convert the HashSet to an array of integers
+        int[] resultArray = new int[result.size()];
+        int index = 0;
+        for (int num : result) {
+            resultArray[index++] = num;
+        }
+        return resultArray;
     }
 }
