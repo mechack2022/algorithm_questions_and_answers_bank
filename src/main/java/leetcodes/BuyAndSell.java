@@ -1,10 +1,5 @@
 package leetcodes;
 
-import java.net.Inet4Address;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.stream.IntStream;
-
 /*
 Best Time to Buy and Sell Stock:
    - Statement: Given an array `prices` where `prices[i]` is the price of a given stock on day `i`, find the maximum profit that can be achieved by buying and selling the stock.
@@ -17,8 +12,18 @@ public class BuyAndSell {
 
     public static void main(String[] args) {
         System.out.println(buyAndSell1(new int[]{7, 1, 5, 3, 6, 4}));
-    }
 
+     System.out.println(
+
+    bestTimeToBuyStock(new int[] {
+        7, 1, 5, 3, 6, 4
+    }));
+        System.out.println(
+
+    bestTimeToBuyStock(new int[] {
+        7, 6, 4, 3, 1
+    }));
+}
     public static int buyAndSell1(int[] prices) {
         int maxProfit = 0;
 
@@ -32,6 +37,22 @@ public class BuyAndSell {
             }
         }
         return maxProfit;
+    }
+
+    public static int bestTimeToBuyStock(int[] stockPrices) {
+        int minPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        for (int price : stockPrices) {
+            // Update the minimum price seen so far
+            minPrice = Math.min(minPrice, price);
+
+            // Update the maximum profit if the current price provides a better selling opportunity
+            maxProfit = Math.max(maxProfit, price - minPrice);
+        }
+
+        return maxProfit;
+
     }
 
 }
