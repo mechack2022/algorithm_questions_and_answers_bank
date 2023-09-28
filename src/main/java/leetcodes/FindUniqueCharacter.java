@@ -34,7 +34,6 @@ public class FindUniqueCharacter {
                 char nextChar = charArray[j];
                 System.out.println(" curr "+currentChar + " next "+ nextChar);
             }
-            System.out.println("=============================");
         }
         return -1;
     }
