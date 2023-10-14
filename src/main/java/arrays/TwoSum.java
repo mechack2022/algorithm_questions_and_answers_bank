@@ -12,7 +12,7 @@ Example: Input: nums = [2, 7, 11, 15], target = 9. Output: [0, 1].*/
 public class TwoSum {
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(twoSum4(new int[]{ 2, 7, 11, 15}, 9)));
+        System.out.println(Arrays.toString(twoSum3(new int[]{ 2, 7, 11, 15}, 22)));
     }
 
     public static int[] twoSum(int[] arr, Integer target) {
@@ -62,18 +62,22 @@ public class TwoSum {
 
     public static int[] twoSum3(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
-        return IntStream.range(0, nums.length)
-                .filter(i -> {
-                    int complement = target - nums[i];
-                    if (map.containsKey(complement)) {
-                        return true;
-                    }
-                    map.put(nums[i], i);
-                    return false;
-                })
-                .mapToObj(i -> new int[]{map.get(target - nums[i]), i})
+       return IntStream.range(0, nums.length).filter(
+             i -> {
+                 int iComplement = target - nums[i];
+                 if(map.containsKey(iComplement)){
+                     return true;
+                 }else {
+//                     add a new object with the num in mums as the key and the index ad the value
+                     map.put(nums[i], i);
+                     return false;
+                 }
+             }
+             // create a new int object with the return from filter, that has the index 0 as the value of the that added up to give the target
+        ).mapToObj(i -> (new int[]{map.get(target - nums[i]), i }))
                 .findFirst()
                 .orElse(new int[0]);
+
     }
 
     public  static int[] twoSum4(int[] nums, int target){
