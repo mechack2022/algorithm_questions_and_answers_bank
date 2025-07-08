@@ -35,4 +35,11 @@ Explanation: The triplet (3, 4, 5) is valid because nums[3] == 0 < nums[4] == 4 
         return false;
     }
 
+
+    /*
+    Given two strings s and t, determine if they are isomorphic.
+    Two strings are isomor- phic if the characters in s can be replaced to get t.
+    For example,"egg" and "add" are isomorphic, "foo" and "bar" are not.
+    */
+
 }
