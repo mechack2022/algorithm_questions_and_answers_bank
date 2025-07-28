@@ -5,8 +5,12 @@ public class Problems {
     public static void main(String[] args) {
 
         // Create test case: 342 + 465 = 807
-        ListNode l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
-        ListNode l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
+//        ListNode l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
+//        ListNode l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
+
+
+        ListNode l1 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9)))))));
+        ListNode l2 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9)))));
 
         ListNode result = Problems.addTwoNumbers(l1, l2);
 
